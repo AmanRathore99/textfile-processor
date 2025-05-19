@@ -1,6 +1,9 @@
+# Ignore TypeScript source files (if you only want JS published)
 *.ts
 !*.d.ts
 
-# CDK asset staging directory
+# Ignore CDK staging and build artifacts
 .cdk.staging
 cdk.out
+lambda/
+lambda-build/
