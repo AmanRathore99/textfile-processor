@@ -1,14 +1,35 @@
-# Welcome to your CDK TypeScript project
+# Text File Processor - Serverless Pipeline
 
-This is a blank project for CDK development with TypeScript.
+This project implements a simple serverless pipeline using AWS services. It allows uploading a text file through an API, processes its content line by line, and stores each line in a DynamoDB table.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+---
 
-## Useful commands
+## 🧰 Tech Stack
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+- **AWS CDK** (TypeScript)
+- **AWS Lambda** (Node.js)
+- **Amazon API Gateway**
+- **Amazon DynamoDB**
+
+---
+
+## 🚀 Project Structure
+
+- `lib/` → CDK stack that provisions the Lambda, API Gateway, and DynamoDB table.
+- `lambda/` → Contains the Lambda function (`processFile.js`) that handles file processing.
+
+---
+
+## 🛠️ Installation & Setup
+
+Make sure you have the AWS CLI configured and CDK installed
+
+```bash
+# 1. Install dependencies
+npm install
+
+# 2. Bootstrap CDK (only once per environment)
+cdk bootstrap
+
+# 3. Deploy the stack
+cdk deploy

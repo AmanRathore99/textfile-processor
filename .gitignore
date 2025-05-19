@@ -1,8 +1,30 @@
+# Build files
 *.js
 !jest.config.js
 *.d.ts
+
+# Dependencies
 node_modules
 
-# CDK asset staging directory
+# AWS CDK outputs
 .cdk.staging
 cdk.out
+
+# Environment/config files
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Temp files
+*.tmp
